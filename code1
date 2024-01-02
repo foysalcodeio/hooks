@@ -1,0 +1,26 @@
+import { useRef } from 'react'
+import './App.css'
+
+function App() {
+
+  let UserName = useRef();
+  let Password = useRef();
+
+  const submitForm = () =>{
+    let a = UserName.current.value //document.getElementbyId("")
+    let b = Password.current.value
+    alert(a)
+    alert(b)
+  }
+  return (
+    <>
+      <div>
+          <input ref={UserName} type="text" placeholder='user name' />
+          <input ref={Password} type="text" placeholder='user password' />
+          <button onClick={submitForm} >Submit</button>
+      </div>
+    </>
+  )
+}
+
+export default App
